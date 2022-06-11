@@ -1,0 +1,36 @@
+{
+  "name": "cypress_cucumber_javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open --e2e --browser chrome"
+    
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anshita-Bhasin/Cypress_Cucumber_JavaScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anshita-Bhasin/Cypress_Cucumber_JavaScript/issues"
+  },
+  "homepage": "https://github.com/Anshita-Bhasin/Cypress_Cucumber_JavaScript#readme",
+  "devDependencies": {
+    "cypress": "^10.1.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "commonPath": "cypress/integration/step-definition/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+}
+
+}
