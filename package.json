@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open --e2e --browser chrome"
-    
-
+    "cucumber-report": "node cucumber-html-report.js",
+    "delete-existingJsonReports": "rm -rf cypress/reports/cucumber-json/*.json",
+    "delete-reportFolder": "rm -rf cypress/reports/",
+    "test": "npx cypress open --e2e --browser chrome ",
+    "testing": "./node_modules/.bin/cypress-tags run -e TAGS='@E2ENaveenAutomationLabs' --browser chrome --headless",
+    "TestWithReportGeneration": "npm run delete-reportFolder ;npm run testing ; npm run cucumber-report ; npm run delete-existingJsonReports"
+   
   },
   "repository": {
     "type": "git",
@@ -20,7 +24,8 @@
   "homepage": "https://github.com/Anshita-Bhasin/Cypress_Cucumber_JavaScript#readme",
   "devDependencies": {
     "cypress": "^10.1.0",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.21.4"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
@@ -31,6 +36,8 @@
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
-}
-
+  },
+  "dependencies": {
+    "save-dev": "^0.0.1-security"
+  }
 }

@@ -40,9 +40,15 @@ class registerPage {
 
     }
 
+    generateEmailId(){
+        const email = (data.email+
+        Date.now()+"@disposable.com");
+        return email;
+
+    }
+
     enterEmailId() {
-        this.webLocators.email().type(data.email+
-            Date.now()+"@disposable.com");
+       this.webLocators.email().type(this.generateEmailId());
 
     }
 
@@ -70,7 +76,6 @@ class registerPage {
     verifySuccessMessage()
     {
         this.webLocators.successMessage().should('exist');
-        
         
     }
 

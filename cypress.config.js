@@ -15,6 +15,22 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/features/*.{feature,features}',
     excludeSpecPattern: "**/cypress/pages/*,cypress/e2e/step-definition/*",
     experimentalSessionAndOrigin: false,
+
+
+
+    "retries": {
+      // Configure retry attempts for `cypress run`
+      // Default is 0
+      "runMode": 2,
+      // Configure retry attempts for `cypress open`
+      // Default is 0
+      "openMode": 1
+    },
+
+
+
+    
+  
   },
 });
 
