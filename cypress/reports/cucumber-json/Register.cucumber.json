@@ -1,0 +1,242 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Register on naveenautomationlabs",
+    "line": 1,
+    "id": "register-on-naveenautomationlabs",
+    "tags": [],
+    "uri": "Register.feature",
+    "elements": [
+      {
+        "id": "register-on-naveenautomationlabs;fill-all-the-mandatory-information-and-register-on-the-website",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Fill all the mandatory information and register on the website",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open url",
+            "result": {
+              "status": "passed",
+              "duration": 1561000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I click on Register",
+            "result": {
+              "status": "passed",
+              "duration": 1013000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I enter firstName",
+            "result": {
+              "status": "passed",
+              "duration": 269000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I enter lastName",
+            "result": {
+              "status": "passed",
+              "duration": 237000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I enter emailId",
+            "result": {
+              "status": "passed",
+              "duration": 603000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I enter Telephone",
+            "result": {
+              "status": "passed",
+              "duration": 300000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I enter password and confirm password",
+            "result": {
+              "status": "passed",
+              "duration": 519000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I select the Priacy Policy",
+            "result": {
+              "status": "passed",
+              "duration": 111000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on continue",
+            "result": {
+              "status": "passed",
+              "duration": 1199000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should be able to see the success message",
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-on-naveenautomationlabs;search-sceanrio",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Search Sceanrio",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I clear the search",
+            "result": {
+              "status": "passed",
+              "duration": 283000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I search for \"MacBook\"",
+            "result": {
+              "status": "passed",
+              "duration": 158000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I click on search button",
+            "result": {
+              "status": "passed",
+              "duration": 572000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click on AddToCart",
+            "result": {
+              "status": "passed",
+              "duration": 134000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see success message for the \"MacBook\" added to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 295000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "register-on-naveenautomationlabs;search-sceanrio",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Search Sceanrio",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I clear the search",
+            "result": {
+              "status": "passed",
+              "duration": 239000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I search for \"iPhone\"",
+            "result": {
+              "status": "passed",
+              "duration": 152000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I click on search button",
+            "result": {
+              "status": "passed",
+              "duration": 765000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click on AddToCart",
+            "result": {
+              "status": "passed",
+              "duration": 112000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see success message for the \"iPhone\" added to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 467000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

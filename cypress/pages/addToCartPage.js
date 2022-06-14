@@ -3,22 +3,25 @@ const data = require('../fixtures/testData.json')
 
 class addToCartPage {
 
-
+   
     webLocators = {
-        search: () => cy.get('input[type="text"]'),
+        search: () => cy.get('input[name="search"]'),
         addToCartButton: () => cy.get('div.button-group>button').first(),
         successMessage: () => cy.get('div.alert.alert-success.alert-dismissible'),
         searchProduct: () => cy.get('button.btn.btn-default.btn-lg')
+
+
+       
     }
 
 
-    openUrl() {
-        cy.visit('/');
+    clearSearch()
+    {
+        this.webLocators.search().first().clear();
     }
-
     searchText(product) {
 
-        this.webLocators.search().type(product);
+        this.webLocators.search().first().type(product);
     }
 
     clickOnSearch() {
@@ -29,8 +32,8 @@ class addToCartPage {
         this.webLocators.addToCartButton().click();
     }
 
-    verifySucessMessage() {
-        this.webLocators.successMessage().contains(data.successMessage);
+    verifySucessMessage(product) {
+        this.webLocators.successMessage().should('contain',data.successProductMessage).and('contain',product);
     }
 }
 

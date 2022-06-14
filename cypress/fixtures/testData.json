@@ -1,4 +1,12 @@
 {
-    "product": "MacBook",
-    "successMessage": "Success: You have added MacBook to your shopping cart! "
+    
+    "successMessage": "Success: You have added MacBook to your shopping cart! ",
+
+    "successProductMessage": "Success: You have added",
+    "firstName":"Anshita",
+    "lastName":"Bhasin",
+    "email":"ABTest_",
+    "telephone":"0123456789",
+    "password":"Test123!"
+
 }

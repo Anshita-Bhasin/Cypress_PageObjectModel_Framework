@@ -1,24 +1,24 @@
 import { And, Given, Then } from "cypress-cucumber-preprocessor/steps";
-import OpenPage from '../../pages/addToCartPage';
+import AddToCartPage from '../../pages/addToCartPage';
 
 
-Given('I open url', () => {
-    OpenPage.openUrl();
-
-
-})
-
-
-å
 And('I search for {string}', (product) => {
 
-    OpenPage.searchText(product);
+    AddToCartPage.searchText(product);
 
 });
 
-And('I click on search button', () => { OpenPage.clickOnSearch(); });
+Given('I clear the search',()=>{
+    AddToCartPage.clearSearch();
+});
+
+And('I click on search button', () => { AddToCartPage.clickOnSearch(); });
 
 
-And('I click on AddToCart', () => { OpenPage.addToCart(); });
+And('I click on AddToCart', () => { AddToCartPage.addToCart(); });
 
-Then('I should see success message for the product added to the cart', () => { OpenPage.verifySucessMessage(); });
+Then('I should see success message for the {string} added to the cart', (product) => {
+    AddToCartPage.verifySucessMessage(product);
+     });
+
+   

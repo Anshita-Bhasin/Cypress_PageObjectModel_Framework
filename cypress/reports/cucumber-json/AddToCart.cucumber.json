@@ -10,7 +10,7 @@
       {
         "id": "open-website;i-want-to-open-website-and-verify-the-title",
         "keyword": "Scenario",
-        "line": 3,
+        "line": 12,
         "name": "I want to open website and verify the title",
         "tags": [],
         "type": "scenario",
@@ -18,51 +18,47 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "I open url",
             "result": {
-              "status": "passed",
-              "duration": 550000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 5,
-            "name": "I search for \"MacBook\"",
-            "result": {
-              "status": "passed",
-              "duration": 241000000
+              "status": "undefined",
+              "duration": 49000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 6,
-            "name": "I click on search button",
+            "name": "I search for \"MacBook\"",
             "result": {
-              "status": "passed",
-              "duration": 462000000
+              "status": "skipped"
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 7,
+            "name": "I click on search button",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
             "name": "I click on AddToCart",
             "result": {
-              "status": "passed",
-              "duration": 127000000
+              "status": "skipped"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 8,
-            "name": "I should see success message for the product added to the cart",
+            "line": 9,
+            "name": "I should see success message for the \"MacBook\" added to the cart",
             "result": {
-              "status": "passed",
-              "duration": 270000000
+              "status": "skipped"
             }
           }
         ]
