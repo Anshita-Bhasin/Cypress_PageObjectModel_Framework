@@ -1,24 +1,13 @@
 @E2ENaveenAutomationLabs
 Feature: End to end testing on naveenautomationlabs
-
-       Scenario: Fill all the mandatory information and register on the website
+       Background: Login 
               Given I open url
-              Given I click on Register
-              Given I enter firstName
-              Given I enter lastName
-              Given I enter emailId
-              Given I enter Telephone
-              Given I enter password and confirm password
-              And I select the Priacy Policy
-              And I click on continue
-              Then I should be able to see the success message
-
-
-       Scenario: Login into the webapp
               Given I select to Login
               Given I enter emailaddress
               Given I enter password
               And I click on LoginButton
+              Then I should be logged In successfully
+
 
 
        Scenario Outline: Search And Add to Cart Sceanrio
@@ -33,3 +22,14 @@ Feature: End to end testing on naveenautomationlabs
                      | Product |
                      | MacBook |
                      | iPhone  |
+
+
+       Scenario: Enter Billing Details
+              Given I click on checkout
+              Given I enter firstName
+              Given I enter lastName
+              Given I enter Address1
+              Given I enter City
+              Given I select Country
+              Given I select Region
+              Given I click on Continue

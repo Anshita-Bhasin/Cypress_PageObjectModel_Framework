@@ -5,8 +5,8 @@ class loginPage {
 
 
     webLocators = {
-        
-        continueTologin: () => cy.get('a:contains("Continue")'),
+        myAccount: () => cy.get('a[title="My Account"]'),
+        login: () => cy.get('a:contains("Login")'),
         email: () => cy.get('input[name="email"]'),
         password: () => cy.get('input[name="password"]'),
         loginSubmit: () => cy.get('input[value="Login"]'),
@@ -17,7 +17,8 @@ class loginPage {
         confirmPassword: () => cy.get('input#input-confirm'),
         agreePolicy: () => cy.get('input[name="agree"]'),
         continue: () => cy.get('input.btn.btn-primary'),
-        successMessage: () => cy.get('h1:contains("Your Account Has Been Created!")')
+        successMessage: () => cy.get('h1:contains("Your Account Has Been Created!")'),
+        userAccount:()=> cy.get('h2:contains("My Account")')
 
 
     }
@@ -25,22 +26,27 @@ class loginPage {
 
 
     selectLogin() {
-        this.webLocators.continueTologin().click();
+        
+        this.webLocators.myAccount().click();
+        this.webLocators.login().click();
 
     }
 
     enterEmailAddress() {
-        const email = RegisterPage.generateEmailId();
-       // cy.log("*******" + generateEmailId);
-        this.webLocators.email().type(RegisterPage.generateEmailId());
+       
+        this.webLocators.email().type(data.loginEmail);
 
     }
     enterPassword() {
-        this.webLocators.password().type(data.password);
+        this.webLocators.password().type(data.loginPassword);
 
     }
     clickLogin() {
         this.webLocators.loginSubmit().click();
+    }
+    verifyLogin()
+    {
+        this.webLocators.userAccount().should('exist');
     }
 
 }

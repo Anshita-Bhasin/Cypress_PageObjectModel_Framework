@@ -7,6 +7,15 @@
     "lastName":"Bhasin",
     "email":"ABTest_",
     "telephone":"0123456789",
-    "password":"Test123!"
+    "password":"Test123!",
+    "loginEmail":"anshita.bhasin@dispostable.com",
+    "loginPassword":"Test123!!",
+    
+   "BillingAddress" :{
+       "address1":"SZK Road",
+       "city":"Dubai"
+
+
+    }
 
 }

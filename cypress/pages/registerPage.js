@@ -6,8 +6,8 @@ class registerPage {
     webLocators = {
         myAccount: () => cy.get('a[title="My Account"]'),
         register: () => cy.get('a:contains("Register")'),
-        firstName: () => cy.get('input#input-firstname'),
-        lastName: () => cy.get('input#input-lastname'),
+        firstName: () => cy.get('input[name="firstname"]'),
+        lastName: () => cy.get('input[name="lastname"]'),
         email: () => cy.get('input#input-email'),
         telephone: () => cy.get('input#input-telephone'),
         password: () => cy.get('input#input-password'),

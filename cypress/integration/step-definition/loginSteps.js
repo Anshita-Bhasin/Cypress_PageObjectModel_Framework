@@ -16,3 +16,8 @@ Given('I enter password', () => {
 And('I click on LoginButton', () => {
     LoginPage.clickLogin();
 });
+
+Then('I should be logged In successfully',()=>
+{
+    LoginPage.verifyLogin();
+}) 
