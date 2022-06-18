@@ -1,40 +1,46 @@
 import { And, Before, Given, Then } from "cypress-cucumber-preprocessor/steps";
-import RegisterPage from '../../pages/registerPage';
+import registerPage from '../../pages/registerPage';
 
 
 Given('I open url', () => {
-    RegisterPage.openUrl();
+    registerPage.openUrl();
 
 });
 
 Given('I click on Register', () => {
-    RegisterPage.clickOnRegisterButton();
+    registerPage.clickOnRegisterButton();
 });
 Given('I enter firstName', () => {
-    RegisterPage.enterFirstName();
+    registerPage.enterFirstName();
 });
 
 Given('I enter lastName', () => {
-    RegisterPage.enterLastName();
+    registerPage.enterLastName();
 });
 Given('I enter emailId', () => {
-    RegisterPage.enterEmailId();
+    registerPage.enterEmailId();
 });
 Given('I enter Telephone', () => {
-    RegisterPage.enterPhoneNumber();
+    registerPage.enterPhoneNumber();
 });
-Given('I enter password and confirm password', () => {
-    RegisterPage.enterPassword();
+Given('I enter password', () => {
+    registerPage.enterPassword();
 });
+Given('I enter confirm password', () => {
+    registerPage.enterConfirmPassword();
+});
+
 And('I select the Priacy Policy', () => {
-    RegisterPage.selectPrivacyPolicy();
+    registerPage.selectPrivacyPolicy();
 });
 And('I click on continue', () => {
-    RegisterPage.clickContinue();
+    registerPage.clickContinue();
 });
 Then('I should be able to see the success message',()=>
 {
-    RegisterPage.verifySuccessMessage(); 
+    registerPage.verifySuccessMessage(); 
 });
+Given('I enter LoginemailId',()=>{registerPage.enterLogin()}) 
 
 
+Then('I logout',()=>{registerPage.LogOut();});

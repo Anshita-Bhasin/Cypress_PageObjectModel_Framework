@@ -7,8 +7,8 @@
     "cucumber-report": "node cucumber-html-report.js",
     "delete-existingJsonReports": "rm -rf cypress/reports/cucumber-json/*.json",
     "delete-reportFolder": "rm -rf cypress/reports/",
-    "test": "npx cypress open --e2e --browser chrome ",
-    "testing": "./node_modules/.bin/cypress-tags run -e TAGS='@E2ENaveenAutomationLabs' --browser chrome --headless",
+    "test": "npx cypress run --e2e --browser chrome ",
+    "testing": "npx cypress run -e TAGS='@E2ENaveenAutomationLabs' --e2e --browser chrome  --headed",
     "TestWithReportGeneration": "npm run delete-reportFolder ;npm run testing ; npm run cucumber-report ; npm run delete-existingJsonReports"
    
   },

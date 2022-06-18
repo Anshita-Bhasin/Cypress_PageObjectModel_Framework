@@ -1,23 +1,15 @@
 import { And, Given, Then } from "cypress-cucumber-preprocessor/steps";
-import LoginPage from '../../pages/loginPage';
+import loginPage from '../../pages/loginPage';
 
 Given('I select to Login', () => {
-    LoginPage.selectLogin();
-});
-
-Given('I enter emailaddress', () => {
-    LoginPage.enterEmailAddress();
-});
-
-Given('I enter password', () => {
-    LoginPage.enterPassword();
+    loginPage.selectLogin();
 });
 
 And('I click on LoginButton', () => {
-    LoginPage.clickLogin();
+    loginPage.clickLogin();
 });
 
 Then('I should be logged In successfully',()=>
 {
-    LoginPage.verifyLogin();
+    loginPage.verifyLogin();
 }) 

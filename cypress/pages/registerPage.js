@@ -1,4 +1,6 @@
 const data = require('../fixtures/testData.json')
+const email = (data.email+
+    Date.now()+"@dispostable.com");
 
 class registerPage {
 
@@ -6,6 +8,7 @@ class registerPage {
     webLocators = {
         myAccount: () => cy.get('a[title="My Account"]'),
         register: () => cy.get('a:contains("Register")'),
+        logout:()=>cy.get('a:contains("Logout")'),
         firstName: () => cy.get('input[name="firstname"]'),
         lastName: () => cy.get('input[name="lastname"]'),
         email: () => cy.get('input#input-email'),
@@ -40,18 +43,12 @@ class registerPage {
 
     }
 
-    generateEmailId(){
-        const email = (data.email+
-        Date.now()+"@disposable.com");
-        return email;
-
-    }
-
-    enterEmailId() {
-       this.webLocators.email().type(this.generateEmailId());
-
-    }
-
+     
+     enterEmailId() {
+        this.webLocators.email().type(email);
+ 
+     }
+  
 
     enterPhoneNumber() {
         this.webLocators.telephone().type(data.telephone);
@@ -60,8 +57,11 @@ class registerPage {
 
     enterPassword() {
         this.webLocators.password().type(data.password);
-        this.webLocators.confirmPassword().type(data.password);
+        
 
+    }
+    enterConfirmPassword(){
+        this.webLocators.confirmPassword().type(data.password);
     }
 
 
@@ -78,7 +78,17 @@ class registerPage {
         this.webLocators.successMessage().should('exist');
         
     }
+    LogOut(){
+        this.webLocators.myAccount().click();
+        this.webLocators.logout().first().click();
+       
 
+    }
+
+    enterLogin(){
+        this.webLocators.email().type(data.loginEmail);
+        
+    }
 
 
 }

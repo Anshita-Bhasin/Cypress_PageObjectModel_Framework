@@ -13,3 +13,5 @@ Then('I see {string} in the cart is present',(product)=>{
     ShoppingCartPage.verifyProductsInCart(product);
 });
    
+Given('I clear the cart',()=>{ShoppingCartPage.clearcart();});
+  

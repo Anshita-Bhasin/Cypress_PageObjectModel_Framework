@@ -9,6 +9,7 @@ class addToCartPage {
         addToCartButton: () => cy.get('div.button-group>button').first(),
         successMessage: () => cy.get('div.alert.alert-success.alert-dismissible'),
         searchProduct: () => cy.get('button.btn.btn-default.btn-lg')
+        
 
 
        

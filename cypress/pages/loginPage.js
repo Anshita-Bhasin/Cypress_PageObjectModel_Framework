@@ -16,7 +16,7 @@ class loginPage {
         password: () => cy.get('input#input-password'),
         confirmPassword: () => cy.get('input#input-confirm'),
         agreePolicy: () => cy.get('input[name="agree"]'),
-        continue: () => cy.get('input.btn.btn-primary'),
+        continue: () => cy.get('a:contains("Continue")'),
         successMessage: () => cy.get('h1:contains("Your Account Has Been Created!")'),
         userAccount:()=> cy.get('h2:contains("My Account")')
 
@@ -32,15 +32,6 @@ class loginPage {
 
     }
 
-    enterEmailAddress() {
-       
-        this.webLocators.email().type(data.loginEmail);
-
-    }
-    enterPassword() {
-        this.webLocators.password().type(data.loginPassword);
-
-    }
     clickLogin() {
         this.webLocators.loginSubmit().click();
     }
@@ -48,6 +39,7 @@ class loginPage {
     {
         this.webLocators.userAccount().should('exist');
     }
+   
 
 }
 module.exports = new loginPage();

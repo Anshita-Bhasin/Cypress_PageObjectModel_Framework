@@ -1,0 +1,102 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "End to end testing on naveenautomationlabs",
+    "line": 2,
+    "id": "end-to-end-testing-on-naveenautomationlabs",
+    "tags": [
+      {
+        "name": "@E2ENaveenAutomationLabs",
+        "line": 1
+      }
+    ],
+    "uri": "Logout.feature",
+    "elements": [
+      {
+        "id": "end-to-end-testing-on-naveenautomationlabs;register,-login,-addtocart,checkout",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Register, Login, AddToCart,Checkout",
+        "tags": [
+          {
+            "name": "@E2ENaveenAutomationLabs",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open url",
+            "result": {
+              "status": "passed",
+              "duration": 886000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I select to Login",
+            "result": {
+              "status": "passed",
+              "duration": 637000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I enter LoginemailId",
+            "result": {
+              "status": "passed",
+              "duration": 616000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I enter password",
+            "result": {
+              "status": "passed",
+              "duration": 260000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on LoginButton",
+            "result": {
+              "status": "passed",
+              "duration": 779000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should be logged In successfully",
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I logout",
+            "result": {
+              "status": "passed",
+              "duration": 923000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

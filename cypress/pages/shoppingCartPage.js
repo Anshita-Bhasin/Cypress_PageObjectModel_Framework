@@ -14,7 +14,9 @@ class shoppingCartPage {
         confirmPassword: () => cy.get('input#input-confirm'),
         agreePolicy: () => cy.get('input[name="agree"]'),
         continue: () => cy.get('input.btn.btn-primary'),
-        successMessage:()=>cy.get('h1:contains("Your Account Has Been Created!")')
+        successMessage:()=>cy.get('h1:contains("Your Account Has Been Created!")'),
+        clearCart:()=>cy.get('button[title="Remove"]'),
+        
 
         
     }
@@ -33,7 +35,31 @@ class shoppingCartPage {
         cy.get('a:contains(' + product + ')').contains(product);
 
     }
-      
+    clearcart(){
+
+
+
+
+
+        this.webLocators.cart().then((value)=>{
+
+            const cartValue=value.text();
+
+            if(cartValue==="0 item(s) - $0.00")
+
+            {
+                console.log("Fesh Cart");
+
+            
+
+        }
+        else{
+            this.webLocators.cart().click();
+            this.webLocators.clearCart().first().click({force:true});
+        }
+            
+
+    });}
 
 
 }
