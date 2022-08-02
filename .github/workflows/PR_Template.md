@@ -2,9 +2,6 @@
 
 Please include a summary of the change and which issue is fixed.
 
-## Link to the Jira Ticket
-JIRA Id (Test Case Link Or Automation Task Link )
-
 ## Type of change
 
 - [ ] New feature (non-breaking change which adds functionality)
