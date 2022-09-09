@@ -5,9 +5,9 @@ name: Cypress Automation
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   Cypress-Test:
@@ -44,10 +44,10 @@ jobs:
           echo
           "https://s3.amazonaws.com/qa-ab-sdet/${{steps.S3.outputs.object_key}}/index.html"
           
-     - name: Slack Notifications
-       with:
-         webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-         status: ${{ job.status }}
-         message: Test Report - https://s3.amazonaws.com/b2b-web-automation/${{steps.S3.outputs.object_key}}/index.html
+      - name: Slack Notifications
+        with:
+          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          status: ${{ job.status }}
+          message: Test Report - https://s3.amazonaws.com/b2b-web-automation/${{steps.S3.outputs.object_key}}/index.html
 
             
