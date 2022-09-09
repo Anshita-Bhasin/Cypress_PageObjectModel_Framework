@@ -1,0 +1,53 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Cypress Automation
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  Cypress-Test:
+    timeout-minutes: 120
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: cypress-Test-report
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run TestWithReportGeneration
+          browser: chrome
+          
+      - name: Upload Report on GitHub Actions
+        uses: actions/upload-artifact@v2
+        with:
+          name: HTML_Report
+          path: cypress/reports/Results
+          retention-days: 2 
+          
+      - name: Upload to AWS S3
+        uses: shallwefootball/s3-upload-action@master
+        id: S3
+        with:
+          aws_key_id: ${{secrets.AWS_KEY_ID}}
+          aws_secret_access_key: ${{secrets.AWS_ACCESS_KEY}}
+          aws_bucket: qa-ab-sdet
+          source_dir: cypress/reports/Results
+         
+          
+      - name: Link to AWS S3 Bucket Report
+        run: >
+          echo
+          "https://s3.amazonaws.com/qa-ab-sdet/${{steps.S3.outputs.object_key}}/index.html"
+          
+     - name: Slack Notifications
+       with:
+         webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+         status: ${{ job.status }}
+         message: Test Report - https://s3.amazonaws.com/b2b-web-automation/${{steps.S3.outputs.object_key}}/index.html
+
+            
