@@ -16,6 +16,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        
       - name: cypress-Test-report
         uses: cypress-io/github-action@v2
         with:
@@ -37,14 +38,14 @@ jobs:
           aws_secret_access_key: ${{secrets.AWS_ACCESS_KEY}}
           aws_bucket: qa-ab-sdet
           source_dir: cypress/reports/Results
-         
-          
+                  
       - name: Link to AWS S3 Bucket Report
         run: >
           echo
           "https://s3.amazonaws.com/qa-ab-sdet/${{steps.S3.outputs.object_key}}/index.html"
           
       - name: Slack Notifications
+        uses: act10ns/slack@v1
         with:
           webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           status: ${{ job.status }}
