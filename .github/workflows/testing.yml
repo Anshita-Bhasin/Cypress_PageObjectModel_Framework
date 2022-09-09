@@ -36,13 +36,13 @@ jobs:
         with:
           aws_key_id: ${{secrets.AWS_KEY_ID}}
           aws_secret_access_key: ${{secrets.AWS_ACCESS_KEY}}
-          aws_bucket: qa-ab-sdet
+          aws_bucket: test-ab-sdet
           source_dir: cypress/reports/Results
                   
       - name: Link to AWS S3 Bucket Report
         run: >
           echo
-          "https://s3.amazonaws.com/qa-ab-sdet/${{steps.S3.outputs.object_key}}/index.html"
+          "https://s3.amazonaws.com/test-ab-sdet/${{steps.S3.outputs.object_key}}/index.html"
           
       - name: Slack Notifications
         uses: act10ns/slack@v1
