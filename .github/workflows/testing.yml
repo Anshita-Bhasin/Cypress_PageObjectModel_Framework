@@ -49,4 +49,4 @@ jobs:
         with:
           webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           status: ${{ job.status }}
-          message: Test Report - https://s3.amazonaws.com/b2b-web-automation/${{steps.S3.outputs.object_key}}/index.html
+          message: Test Report - https://s3.amazonaws.com/test-ab-sdet/${{steps.S3.outputs.object_key}}/index.html
