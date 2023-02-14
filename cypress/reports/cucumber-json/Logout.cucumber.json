@@ -6,20 +6,20 @@
     "id": "end-to-end-testing-on-naveenautomationlabs",
     "tags": [
       {
-        "name": "@E2ENaveenAutomationLabs",
+        "name": "@E2ENaveenAutomationLabsLogout",
         "line": 1
       }
     ],
     "uri": "Logout.feature",
     "elements": [
       {
-        "id": "end-to-end-testing-on-naveenautomationlabs;register,-login,-addtocart,checkout",
+        "id": "end-to-end-testing-on-naveenautomationlabs;login-and-logout",
         "keyword": "Scenario",
         "line": 4,
-        "name": "Register, Login, AddToCart,Checkout",
+        "name": "Login and Logout",
         "tags": [
           {
-            "name": "@E2ENaveenAutomationLabs",
+            "name": "@E2ENaveenAutomationLabsLogout",
             "line": 1
           }
         ],
@@ -31,8 +31,7 @@
             "line": 6,
             "name": "I open url",
             "result": {
-              "status": "passed",
-              "duration": 886000000
+              "status": "skipped"
             }
           },
           {
@@ -41,8 +40,7 @@
             "line": 7,
             "name": "I select to Login",
             "result": {
-              "status": "passed",
-              "duration": 637000000
+              "status": "skipped"
             }
           },
           {
@@ -51,8 +49,7 @@
             "line": 8,
             "name": "I enter LoginemailId",
             "result": {
-              "status": "passed",
-              "duration": 616000000
+              "status": "skipped"
             }
           },
           {
@@ -61,8 +58,7 @@
             "line": 9,
             "name": "I enter password",
             "result": {
-              "status": "passed",
-              "duration": 260000000
+              "status": "skipped"
             }
           },
           {
@@ -71,8 +67,7 @@
             "line": 10,
             "name": "I click on LoginButton",
             "result": {
-              "status": "passed",
-              "duration": 779000000
+              "status": "skipped"
             }
           },
           {
@@ -81,8 +76,7 @@
             "line": 11,
             "name": "I should be logged In successfully",
             "result": {
-              "status": "passed",
-              "duration": 16000000
+              "status": "skipped"
             }
           },
           {
@@ -91,8 +85,7 @@
             "line": 12,
             "name": "I logout",
             "result": {
-              "status": "passed",
-              "duration": 923000000
+              "status": "skipped"
             }
           }
         ]
