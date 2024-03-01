@@ -15,6 +15,7 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/features/*.{feature,features}',
     excludeSpecPattern: "**/cypress/pages/*,cypress/e2e/step-definition/*",
     experimentalSessionAndOrigin: false,
+    watchForFileChanges: false,
 
 
 

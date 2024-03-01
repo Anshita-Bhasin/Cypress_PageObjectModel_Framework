@@ -6,7 +6,7 @@
     "id": "end-to-end-testing-on-naveenautomationlabs",
     "tags": [
       {
-        "name": "@E2ENaveenAutomationLabsLogout",
+        "name": "@regressionLogout",
         "line": 1
       }
     ],
@@ -19,7 +19,7 @@
         "name": "Login and Logout",
         "tags": [
           {
-            "name": "@E2ENaveenAutomationLabsLogout",
+            "name": "@regressionLogout",
             "line": 1
           }
         ],

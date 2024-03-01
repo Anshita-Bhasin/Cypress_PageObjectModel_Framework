@@ -8,7 +8,7 @@
     "delete-existingJsonReports": "rm -rf cypress/reports/cucumber-json/*.json",
     "delete-reportFolder": "rm -rf cypress/reports/",
     "test": "npx cypress run --e2e --browser chrome ",
-    "testing": "npx cypress run -e TAGS='@E2ENaveenAutomationLabs' --e2e --browser chrome  --headed",
+    "testing": "npx cypress run -e TAGS='@regressionE2E' --e2e --browser chrome  --headless",
     "TestWithReportGeneration": "npm run delete-reportFolder ;npm run testing ; npm run cucumber-report ; npm run delete-existingJsonReports"
   },
   "repository": {
@@ -22,13 +22,14 @@
   },
   "homepage": "https://github.com/Anshita-Bhasin/Cypress_Cucumber_JavaScript#readme",
   "devDependencies": {
-    "cypress": "12.5.1",
+    "cypress": "12.10.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "multiple-cucumber-html-reporter": "^1.21.4"
+    "multiple-cucumber-html-reporter": "^3.1.0"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
-    "commonPath": "cypress/integration/step-definition/",
+    "commonPath": "cypress/integration/step-definition/*",
+    "filterSpecs": true,
+    "omitFiltered": true,
     "cucumberJson": {
       "generate": true,
       "outputFolder": "cypress/reports/cucumber-json",

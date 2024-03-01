@@ -1,4 +1,4 @@
-@E2ENaveenAutomationLabsReg
+@regressionReg
 Feature: End to end testing on naveenautomationlabs
 
        Scenario: Fill all the mandatory information and register on the website

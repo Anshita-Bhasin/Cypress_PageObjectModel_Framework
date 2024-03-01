@@ -6,59 +6,58 @@ class checkOutPage {
 
 
     webLocators = {
-        checkout: () => cy.get('a[title="Checkout"]'),
+        checkout: () => cy.contains('Checkout'),
         address1: () => cy.get('input#input-payment-address-1'),
         city: () => cy.get('input#input-payment-city'),
         country: () => cy.get('select#input-payment-country').select('United Arab Emirates'),
         region: () => cy.get('select#input-payment-zone').select('Dubai'),
         continue: () => cy.get('input[type="button"]'),
         loggedIn: () => cy.get('input[value="existing"]'),
-        deliveryDetailsContinue:()=>cy.get('input#button-shipping-address'),
-        deliveryMethodContinue:()=>cy.get('input#button-shipping-method'),
-        paymentMethodContinue:()=>cy.get('input#button-payment-method'),
-        confirmOrder:()=>cy.get('input[value="Confirm Order"]'),
-        orderPlaced:()=>cy.get('h1:contains("Your order has been placed!")')
+        deliveryDetailsContinue: () => cy.get('input#button-shipping-address'),
+        deliveryMethodContinue: () => cy.get('input#button-shipping-method'),
+        paymentMethodContinue: () => cy.get('input#button-payment-method'),
+        confirmOrder: () => cy.get('input[value="Confirm Order"]'),
+        orderPlaced: () => cy.get('h1:contains("Your order has been placed!")')
 
     }
 
 
     clickOnCheckout() {
+        cy.wait(2000)
         this.webLocators.checkout().click();
     }
 
 
 
-    enterBillingAddress()
-{
-    if (this.webLocators.loggedIn().should('be.checked')) {
-        this.clickContinue();
-        this.selectPaymentMethods();
+    enterBillingAddress() {
+        if (this.webLocators.loggedIn().should('be.checked')) {
+            this.clickContinue();
+            this.selectPaymentMethods();
+
+        }
+        else {
+            registerPage.enterFirstName();
+            registerPage.enterLastName();
+            this.enterAddress();
+            this.enterCity();
+            this.enterCountry();
+            this.enterRegion();
+            this.clickContinue();
+            this.selectPaymentMethods();
+
+        }
 
     }
-    else
-    {
-    registerPage.enterFirstName();
-    registerPage.enterLastName();
-    this.enterAddress();
-    this.enterCity();
-    this.enterCountry();
-    this.enterRegion();
-    this.clickContinue();
-    this.selectPaymentMethods();
+    selectPaymentMethods() {
+        this.selectDeliveryDetails();
+        this.selectDeliveryMethod();
+        this.selectPaymentMethod();
 
     }
-
-}
-selectPaymentMethods(){
-    this.selectDeliveryDetails();
-    this.selectDeliveryMethod();
-    this.selectPaymentMethod();
-
-}
 
     enterAddress() {
-       
-            this.webLocators.address1().type(data.BillingAddress.address1);
+
+        this.webLocators.address1().type(data.BillingAddress.address1);
     }
 
 
@@ -80,25 +79,22 @@ selectPaymentMethods(){
         this.webLocators.continue().click();
 
     }
-    selectDeliveryDetails()
-    {
+    selectDeliveryDetails() {
         this.webLocators.deliveryDetailsContinue().click();
     }
-    selectDeliveryMethod()
-    {
+    selectDeliveryMethod() {
 
         this.webLocators.deliveryMethodContinue().click();
     }
-    selectPaymentMethod()
-    {
+    selectPaymentMethod() {
         registerPage.selectPrivacyPolicy();
 
         this.webLocators.paymentMethodContinue().click();
     }
-    confirmOrder(){
+    confirmOrder() {
         this.webLocators.confirmOrder().click();
     }
-    verifyPlacedOrder(){
+    verifyPlacedOrder() {
         this.webLocators.orderPlaced().should('exist');
     }
 

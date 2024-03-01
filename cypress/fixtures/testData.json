@@ -1,21 +1,17 @@
 {
-    
-    "successMessage": "Success: You have added MacBook to your shopping cart! ",
+  "successMessage": "Success: You have added MacBook to your shopping cart! ",
 
-    "successProductMessage": "Success: You have added",
-    "firstName":"Anshita",
-    "lastName":"Bhasin",
-    "email":"ABTest_",
-    "telephone":"0123456789",
-    "password":"Test123!",
-    "loginEmail":"ABTest_1655559757078@dispostable.com",
-    "loginPassword":"Test123!!",
-    
-   "BillingAddress" :{
-       "address1":"SZK Road",
-       "city":"Dubai"
+  "successProductMessage": "Success: You have added",
+  "firstName": "Anshita",
+  "lastName": "Bhasin",
+  "email": "ABTest_",
+  "telephone": "0123456789",
+  "password": "Test123!",
+  "loginEmail": "ABTest_1682788507960@dispostable.com",
+  "loginPassword": "Test123!!",
 
-
-    }
-
+  "BillingAddress": {
+    "address1": "SZK Road",
+    "city": "Dubai"
+  }
 }

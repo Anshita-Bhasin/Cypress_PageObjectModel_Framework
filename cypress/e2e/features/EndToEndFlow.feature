@@ -1,4 +1,4 @@
-@E2ENaveenAutomationLabs
+@regressionE2E
 Feature: End to end testing on naveenautomationlabs
         Background:
                 Given I open url
@@ -6,7 +6,7 @@ Feature: End to end testing on naveenautomationlabs
                 Given I enter LoginemailId
                 Given I enter password
                 And I click on LoginButton
-               # Then I should be logged In successfully
+               
 
 
 

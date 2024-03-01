@@ -1,4 +1,4 @@
-@E2ENaveenAutomationLabsLogout
+@regressionLogout
 Feature: End to end testing on naveenautomationlabs
 
        Scenario: Login and Logout

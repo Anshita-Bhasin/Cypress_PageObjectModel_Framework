@@ -6,7 +6,7 @@
     "id": "end-to-end-testing-on-naveenautomationlabs",
     "tags": [
       {
-        "name": "@E2ENaveenAutomationLabsReg",
+        "name": "@regressionReg",
         "line": 1
       }
     ],
@@ -19,7 +19,7 @@
         "name": "Fill all the mandatory information and register on the website",
         "tags": [
           {
-            "name": "@E2ENaveenAutomationLabsReg",
+            "name": "@regressionReg",
             "line": 1
           }
         ],
@@ -133,7 +133,7 @@
         "name": "Login",
         "tags": [
           {
-            "name": "@E2ENaveenAutomationLabsReg",
+            "name": "@regressionReg",
             "line": 1
           }
         ],

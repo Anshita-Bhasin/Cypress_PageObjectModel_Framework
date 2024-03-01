@@ -1,0 +1,23 @@
+name: Test
+
+on: push
+
+jobs:
+  Cypress-Test:
+    timeout-minutes: 120
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: cypress-Test-report
+        uses: cypress-io/github-action@v6
+        with:
+          command: npm run TestWithReportGeneration
+          
+      - name: Upload Report on GitHub Actions
+        uses: actions/upload-artifact@v2
+        with:
+          name: HTML_Report
+          path: cypress/reports/Results
+          retention-days: 2 
+  
